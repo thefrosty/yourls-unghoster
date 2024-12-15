@@ -1,11 +1,10 @@
 <?php
 /**
  * Plugin Name: Unghoster
- * Description: Retrieve person-level contact information including emails and Linkedin for your website visitors. <a href="https://www.unghoster.com/signup?ref=thefrosty" target="_blank">Signup for free</a>.
+ * Description: Retrieve person-level contact information including emails and Linkedin for your website visitors. Signup for free: https://frosty.me/unghoster.
  * Author: Austin Passy
  * Author URI: https://github.com/thefrosty
  * Version: 0.1.0
- * Requires PHP: 8.1
  * Plugin URI: https://github.com/thefrosty/yourls-unghoster
  */
 
