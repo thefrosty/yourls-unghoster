@@ -1,0 +1,28 @@
+{
+    "name": "thefrosty/yourls-unghoster",
+    "description": "Identify people visiting your website in real time, transforming anonymous traffic into valuable sales leads.",
+    "type": "yourls-plugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Austin Passy",
+            "email": "thefrosty@users.noreply.github.com",
+            "homepage": "https://austin.passy.co"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        },
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.1"
+        },
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require": {
+        "php": "^8.1",
+        "composer/installers": "~2.0"
+    }
+}
