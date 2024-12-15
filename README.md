@@ -4,7 +4,7 @@
 [![PHP from Packagist](https://img.shields.io/packagist/php-v/thefrosty/yourls-unghoster.svg)]()
 [![Latest Stable Version](https://img.shields.io/packagist/v/thefrosty/yourls-unghoster.svg)](https://packagist.org/packages/thefrosty/yourls-unghoster)
 [![Total Downloads](https://img.shields.io/packagist/dt/thefrosty/yourls-unghoster.svg)](https://packagist.org/packages/thefrosty/yourls-unghoster)
-[![License](https://img.shields.io/packagist/l/thefrosty/yourls-unghoster.svg)](https://packagist.org/thefrosty/thefrosty/yourls-unghoster)
+[![License](https://img.shields.io/packagist/l/thefrosty/yourls-unghoster.svg)](https://packagist.org/thefrosty/yourls-unghoster)
 
 Retrieve person-level contact information including emails and Linkedin for your website visitors.
 
