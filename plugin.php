@@ -71,51 +71,8 @@ yourls_add_action('pre_redirect', static function (array $args): void {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="refresh" content="5; url=$url" />
-<style>
-.slider {
-    position: absolute;
-    width: 400px;
-    height: 2px;
-    margin-top: -30px;
-}
-
-.line {
-    position: absolute;
-    background: #4a8df8;
-    width: 400px;
-    height: 2px;
-}
-
-.break {
-    position: absolute;
-    background: #222;
-    width: 6px;
-    height: 2px;
-}
-
-.dot1 {
-    animation: loading 2s infinite;
-}
-
-.dot2 {
-    animation: loading 2s 0.5s infinite;
-}
-
-.dot3 {
-    animation: loading 2s 1s infinite;
-}
-
-@keyframes "loading" {
-    from {
-        left: 0;
-    }
-    to {
-        left: 400px;
-    }
-}
-</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="refresh" content="5; url=$url">
 <script>
     !function(i,o,r){i[r]&&i[r].isLoaded||(i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].init=function(n,e){var t;i[r].loading||(i[r].loading=!0,(script=o.createElement("script")).type="text/javascript",script.src="https://cdn.unghoster.com/unghoster.js",script.async=!0,script.onload=function()
     {for(i[r].loaded=!0,i[r].loading=!1,i[r].load&&i[r].load(n,e);i[r].q&&i[r].q.length;){var t=i[r].q.shift();i[r].apply(null,t)}},(t=o.getElementsByTagName("script")[0]).parentNode.insertBefore(script,t))})}
@@ -125,15 +82,9 @@ yourls_add_action('pre_redirect', static function (array $args): void {
 </head>
 <body>
 <h1>Redirecting...</h1>
-<div class="slider">
-	<div class="line"></div>
-	<div class="break dot1"></div>
-	<div class="break dot2"></div>
-	<div class="break dot3"></div>
-</div>
-<p>You are being redirected, if nothing happens, please <a href="$url">follow this link</a><./p>
+<p>You are being redirected, if nothing happens, please <a href="$url">follow this link</a>.</p>
 </body>
 </html> 
 HTML;
-    die;
+    exit;
 });
