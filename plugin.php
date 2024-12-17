@@ -18,6 +18,7 @@ use function strval;
 use function yourls_add_action;
 use function yourls_create_nonce;
 use function yourls_get_option;
+use function yourls_get_remote_title;
 use function yourls_register_plugin_page;
 use function yourls_update_option;
 use function yourls_verify_nonce;
@@ -66,6 +67,7 @@ yourls_add_action('pre_redirect', static function (array $args): void {
     }
 
     $url = $args[0] ?? '';
+    $title = yourls_get_remote_title($url);
 
     echo <<<HTML
 <!DOCTYPE html>
@@ -82,7 +84,7 @@ yourls_add_action('pre_redirect', static function (array $args): void {
 </head>
 <body>
 <h1>Redirecting...</h1>
-<p>You are being redirected, if nothing happens, please <a href="$url">follow this link</a>.</p>
+<p>You are being redirected, if nothing happens, please <a href="$url" title="$title">follow this link</a>.</p>
 </body>
 </html> 
 HTML;
