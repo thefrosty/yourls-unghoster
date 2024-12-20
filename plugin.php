@@ -60,16 +60,17 @@ function getUnghosterId(): string
 }
 
 // Hook our custom function into the 'pre_redirect' event
-yourls_add_action('pre_redirect', static function (array $args): void {
-    $account_id = getUnghosterId();
-    if (empty($account_id)) {
-        return;
-    }
+if (!yourls_is_admin()) {
+    yourls_add_action('pre_redirect', static function (array $args): void {
+        $account_id = getUnghosterId();
+        if (empty($account_id)) {
+            return;
+        }
 
-    $url = $args[0] ?? '';
-    $title = yourls_get_remote_title($url);
+        $url = $args[0] ?? '';
+        $title = yourls_get_remote_title($url);
 
-    echo <<<HTML
+        echo <<<HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,5 +89,6 @@ yourls_add_action('pre_redirect', static function (array $args): void {
 </body>
 </html> 
 HTML;
-    exit;
-});
+        exit;
+    });
+}
